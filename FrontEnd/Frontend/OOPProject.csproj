@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{70EAE023-6940-4A3C-AA6A-6EA73FD9DC96}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OOPProject</RootNamespace>
+    <AssemblyName>OOPProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="HuggingFace, Version=0.2.4.0, Culture=neutral, PublicKeyToken=20925763ef4043f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\HuggingFace.0.2.4\lib\net462\HuggingFace.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SecSemesterProjOOP, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\SecSemesterProjOOP\SecSemesterProjOOP\bin\Debug\SecSemesterProjOOP.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.3, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.3\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Tiktoken, Version=1.1.2.0, Culture=neutral, PublicKeyToken=56a250a977deb371, processorArchitecture=MSIL">
+      <HintPath>..\packages\Tiktoken.1.1.2\lib\net461\Tiktoken.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Chat\ChannelPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Chat\ChannelPage.Designer.cs">
+      <DependentUpon>ChannelPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Chat\ChannelPostsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Chat\ChannelPostsPage.Designer.cs">
+      <DependentUpon>ChannelPostsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Chat\ChatPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Chat\ChatPage.Designer.cs">
+      <DependentUpon>ChatPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Chat\CommunityPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Chat\CommunityPage.Designer.cs">
+      <DependentUpon>CommunityPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Chat\GroupInfoPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Chat\GroupInfoPage.Designer.cs">
+      <DependentUpon>GroupInfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Chat\GroupsInCommunityPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Chat\GroupsInCommunityPage.Designer.cs">
+      <DependentUpon>GroupsInCommunityPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Chat\HomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Chat\HomePage.Designer.cs">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Chat\MessagesChatPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Chat\MessagesChatPage.Designer.cs">
+      <DependentUpon>MessagesChatPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\AddContactPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Settings\AddContactPage.Designer.cs">
+      <DependentUpon>AddContactPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\AddGroupPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Settings\AddGroupPage.Designer.cs">
+      <DependentUpon>AddGroupPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\AddGroupsInCommunityPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Settings\AddGroupsInCommunityPage.Designer.cs">
+      <DependentUpon>AddGroupsInCommunityPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Settings\SettingsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Settings\SettingsPage.Designer.cs">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SignInSignUpForms\SignInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignInSignUpForms\SignInForm.Designer.cs">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SignInSignUpForms\SignUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SignInSignUpForms\SignUpForm.Designer.cs">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserPage.Designer.cs">
+      <DependentUpon>UserPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\CommonAttributes.cs" />
+    <Compile Include="Utilities\CommonFunctoions.cs" />
+    <Compile Include="Utilities\CommonMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilities\CommonMessageBox.Designer.cs">
+      <DependentUpon>CommonMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\ObjectHandler.cs" />
+    <Compile Include="Utilities\Util.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\Chat\ChannelPage.resx">
+      <DependentUpon>ChannelPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Chat\ChannelPostsPage.resx">
+      <DependentUpon>ChannelPostsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Chat\ChatPage.resx">
+      <DependentUpon>ChatPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Chat\CommunityPage.resx">
+      <DependentUpon>CommunityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Chat\GroupInfoPage.resx">
+      <DependentUpon>GroupInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Chat\GroupsInCommunityPage.resx">
+      <DependentUpon>GroupsInCommunityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Chat\HomePage.resx">
+      <DependentUpon>HomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Chat\MessagesChatPage.resx">
+      <DependentUpon>MessagesChatPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\AddContactPage.resx">
+      <DependentUpon>AddContactPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\AddGroupPage.resx">
+      <DependentUpon>AddGroupPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\AddGroupsInCommunityPage.resx">
+      <DependentUpon>AddGroupsInCommunityPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Settings\SettingsPage.resx">
+      <DependentUpon>SettingsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignInSignUpForms\SignInForm.resx">
+      <DependentUpon>SignInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SignInSignUpForms\SignUpForm.resx">
+      <DependentUpon>SignUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserPage.resx">
+      <DependentUpon>UserPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\CommonMessageBox.resx">
+      <DependentUpon>CommonMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="UI\NLP.mbconfig" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addbutton2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addbutton2 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %284%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%291.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %283%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addbutton2 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-removebg-preview %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gh-removebg-preview.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
