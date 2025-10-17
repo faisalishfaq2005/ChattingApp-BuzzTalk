@@ -32,26 +32,32 @@ The project is split into a **UI frontend** and a **reusable backend class libra
 
 ### 📁 Repository Structure
 
+```text
 chatapp/
-DLLFile-Backend/
-DLLFileBackend/
-BL/ # Domain (business) layer: Users, Messages, Groups, etc.
-DL/ # Data layer (DB stubs), interfaces in DLInterfaces/
-DLInterfaces/ # Abstractions for persisting entities
-Utils/ # Utilities
-DLLFileBackend.csproj # Backend class library (.NET 4.7.2)
-packages.config # NuGet packages for backend
-DLLFileBackend.sln
+│
+├── DLLFile-Backend/
+│   └── DLLFileBackend/
+│       ├── BL/                      # Domain (business) layer: Users, Messages, Groups, etc.
+│       ├── DL/                      # Data layer (DB stubs), interfaces in DLInterfaces/
+│       ├── DLInterfaces/            # Abstractions for persisting entities
+│       ├── Utils/                   # Utility classes and helpers
+│       ├── DLLFileBackend.csproj    # Backend class library (.NET 4.7.2)
+│       └── packages.config           # NuGet packages for backend
+│
+│   └── DLLFileBackend.sln           # Backend solution file
+│
+├── FrontEnd/
+│   └── Frontend/
+│       ├── UI/                      # WinForms UI: Chat, Settings, Auth, etc.
+│       ├── Utilities/               # UI helpers and common components
+│       ├── Frontend.csproj          # WinForms app project (.NET 4.7.2)
+│       └── packages.config           # NuGet packages for frontend
+│
+│   └── Frontend.sln                 # Frontend solution file
+│
+└── README.md
 
-FrontEnd/
-Frontend/
-UI/ # WinForms UI: Chat, Settings, Auth, etc.
-Utilities/ # UI helpers and common components
-Frontend.csproj # WinForms app (.NET 4.7.2)
-packages.config # NuGet packages for frontend
-Frontend.sln
-
-
+```
 ---
 
 ### ⚙️ Key Technologies
